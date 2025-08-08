@@ -1,0 +1,60 @@
+### GET /setores
+GET http://localhost:3333/setores
+
+### POST /setores
+POST http://localhost:3333/setores
+content-type: application/json
+
+{
+    "nome":"Desenvolvimento WEB"
+}
+
+### GET /setores/:id
+GET http://localhost:3333/setores/2
+
+### PUT /setores/:id
+PUT http://localhost:3333/setores/2
+content-type: application/json
+
+{
+    "nome":"WEB Developer"
+}
+
+### DELETE /setores/:id
+DELETE http://localhost:3333/setores/2
+
+### ROTA DE TAREFAS
+
+### GET /tarefas
+GET http://localhost:3333/tarefas
+
+### POST /tarefas
+POST http://localhost:3333/tarefas
+content-type: application/json
+
+{
+    "tarefa": "ensinar MVC",
+    "descricao": "Kahoot",
+    "setor_id": 1
+}
+
+### GET /tarefas/:id
+GET http://localhost:3333/tarefas/bc535c5b-9c51-4eb3-a538-82fcc3e431b4
+
+### PUT /tarefas/:id
+PUT http://localhost:3333/tarefas/bc535c5b-9c51-4eb3-a538-82fcc3e431b4
+content-type: application/json
+
+{
+    "setor_id": 1,
+    "situacao": "concluido"
+}
+
+### DELETE /tarefas/:id
+DELETE http://localhost:3333/tarefas/f4b9b23f-1a93-434d-ae3d-52337eb295d3/1
+
+### ---- ROTAS EXTRAS
+GET http://localhost:3333/tarefas/situacao/concluido
+
+###
+GET http://localhost:3333/setores/1/tarefas
